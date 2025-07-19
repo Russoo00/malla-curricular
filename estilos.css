@@ -23,7 +23,7 @@ h1 {
 }
 
 .semestre {
-  background: #ec328c; /* rosado claro */
+  background: #fce4f9; /* rosado claro */
   padding: 15px;
   border-radius: 10px;
   width: 200px;
@@ -53,7 +53,7 @@ h1 {
 }
 
 .ramo:hover {
-  background: #ec328c;
+  background: #f6d8ff;
   box-shadow: 0 0 8px #d9b3ff;
   transform: scale(1.02);
 }
