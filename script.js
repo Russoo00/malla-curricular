@@ -1,6 +1,16 @@
 function toggleAprobado(element) {
+  const yaEstabaAprobado = element.classList.contains("aprobado");
   element.classList.toggle("aprobado");
+
+  if (!yaEstabaAprobado) {
+    mostrarFelicitacion();
+  }
+
   guardarEstado();
+}
+
+function mostrarFelicitacion() {
+  alert("¡Felicidades Antonia, eres la mejor!");
 }
 
 function guardarEstado() {
