@@ -1,155 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #f7d6e0, #fce4f9);
-  padding: 20px;
-  margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #f7d6e0, #fce4f9);
+    padding: 20px;
+    margin: 0;
 }
 
 h1 {
-  text-align: center;
-  color: #7d3c98;
-  margin-bottom: 30px;
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
+    text-align: center;
+    color: #7d3c98;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
 }
 
 .contenedor-malla {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .semestre {
-  background: #fce4f9;
-  padding: 15px;
-  border-radius: 10px;
-  width: 200px; /* ancho fijo para que se acomoden en filas */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-  margin-bottom: 20px;
+    background: #fce4f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-
 .semestre:hover {
-  transform: scale(1.02);
+    transform: scale(1.02);
 }
 
 .semestre h2 {
-  text-align: center;
-  color: #9b59b6;
-  margin-bottom: 10px;
+    text-align: center;
+    color: #9b59b6;
+    margin-bottom: 10px;
 }
 
-/* Ramo styles with sparkle effect */
 .ramo {
-  position: relative;
-  background: white;
-  margin: 6px 0;
-  padding: 10px 15px;
-  border-left: 5px solid #d291f4;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
+    position: relative;
+    background: white;
+    margin: 6px 0;
+    padding: 10px 15px;
+    border-left: 5px solid #d291f4;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
 }
 
 .ramo:hover {
-  background: #f6d8ff;
-  box-shadow: 0 0 12px 2px #d9b3ff;
-  transform: scale(1.05);
+    background: #f6d8ff;
+    box-shadow: 0 0 12px 2px #d9b3ff;
+    transform: scale(1.05);
 }
 
-/* Sparkles container */
 .ramo:hover::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 130%;
-  height: 130%;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 20% 20%, #fff8ff 1px, transparent 2px),
-    radial-gradient(circle at 50% 50%, #f9e2ff 2px, transparent 4px),
-    radial-gradient(circle at 80% 80%, #d2a6ff 1.5px, transparent 3px);
-  background-repeat: no-repeat;
-  animation: sparkle 1.5s linear infinite;
-  opacity: 0.7;
-  border-radius: 8px;
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 130%;
+    height: 130%;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 20%, #fff8ff 1px, transparent 2px),
+        radial-gradient(circle at 50% 50%, #f9e2ff 2px, transparent 4px),
+        radial-gradient(circle at 80% 80%, #d2a6ff 1.5px, transparent 3px);
+    background-repeat: no-repeat;
+    animation: sparkle 1.5s linear infinite;
+    opacity: 0.7;
+    border-radius: 8px;
 }
 
 @keyframes sparkle {
-  0% {
-    background-position:
-      20% 20%,
-      50% 50%,
-      80% 80%;
-  }
-  50% {
-    background-position:
-      22% 18%,
-      52% 48%,
-      78% 82%;
-  }
-  100% {
-    background-position:
-      20% 20%,
-      50% 50%,
-      80% 80%;
-  }
+    0% {
+        background-position: 20% 20%, 50% 50%, 80% 80%;
+    }
+    50% {
+        background-position: 22% 18%, 52% 48%, 78% 82%;
+    }
+    100% {
+        background-position: 20% 20%, 50% 50%, 80% 80%;
+    }
 }
 
 .aprobado {
-  text-decoration: line-through;
-  background: #7d3c98;
-  border-left-color: #4a235a;
-  color: #fff;
-  font-weight: bold;
-  transition: all 0.5s ease;
-  animation: pop 0.25s ease;
+    text-decoration: line-through;
+    background: #7d3c98;
+    border-left-color: #4a235a;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    animation: pop 0.25s ease;
 }
 
 @keyframes pop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
 }
-
 
 #felicitacion {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  text-align: center;
-  font-size: 18px;
-  margin-top: 30px;
-  color: #6c3483;
-  font-weight: bold;
-  font-family: 'Playfair Display', serif;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+    color: #6c3483;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
 }
 
-/* Estilos para el mensaje de felicitación elegante */
 .mensaje-felicitacion {
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: #7d3c98;
-  font-size: 20px;
-  margin-top: 20px;
-  pointer-events: none;
-  user-select: none;
-  min-height: 28px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #7d3c98;
+    font-size: 20px;
+    margin-top: 20px;
+    pointer-events: none;
+    user-select: none;
+    min-height: 28px;
 }
 
 .mensaje-felicitacion.visible {
-  opacity: 1;
+    opacity: 1;
 }
