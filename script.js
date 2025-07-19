@@ -1,3 +1,6 @@
+const mensajeFelicitacion = document.getElementById('mensaje-felicitacion');
+let timeoutId = null;
+
 function toggleAprobado(element) {
   const yaEstabaAprobado = element.classList.contains("aprobado");
   element.classList.toggle("aprobado");
@@ -10,7 +13,14 @@ function toggleAprobado(element) {
 }
 
 function mostrarFelicitacion() {
-  alert("¡Felicidades Antonia, eres la mejor!");
+  mensajeFelicitacion.textContent = "✨ ¡Felicidades Antonia, eres la mejor! ✨";
+  mensajeFelicitacion.classList.add('visible');
+
+  if (timeoutId) clearTimeout(timeoutId);
+
+  timeoutId = setTimeout(() => {
+    mensajeFelicitacion.classList.remove('visible');
+  }, 3000);
 }
 
 function guardarEstado() {
