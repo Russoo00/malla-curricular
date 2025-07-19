@@ -1,13 +1,13 @@
 body {
   font-family: sans-serif;
-  background: #fff5f8;
+  background: #fff;
   padding: 20px;
   margin: 0;
 }
 
 h1 {
   text-align: center;
-  color: #b3005e;
+  color: #c03c5c;
   margin-bottom: 30px;
 }
 
@@ -19,7 +19,7 @@ h1 {
 }
 
 .semestre {
-  background: #ffeaf2;
+  background: #ffd9cc; /* rosado tirado a naranjo tipo coral */
   padding: 15px;
   border-radius: 10px;
   width: 200px;
@@ -28,7 +28,7 @@ h1 {
 
 .semestre h2 {
   text-align: center;
-  color: #a8004f;
+  color: #a83654;
   margin-bottom: 10px;
 }
 
@@ -36,18 +36,19 @@ h1 {
   background: white;
   margin: 6px 0;
   padding: 10px;
-  border-left: 5px solid #b3005e;
+  border-left: 5px solid #ff7f50; /* coral */
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .ramo:hover {
-  background: #f0f0f0;
+  background: #ffe5dc;
 }
 
 .aprobado {
   text-decoration: line-through;
-  background: #d4edda;
-  border-left-color: #28a745;
+  background: #d8b4f8; /* morado claro */
+  border-left-color: #9b59b6; /* morado fuerte */
+  color: #5e2d79;
 }
