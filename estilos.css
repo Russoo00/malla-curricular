@@ -8,6 +8,7 @@ body {
 h1 {
   text-align: center;
   color: #b3005e;
+  margin-bottom: 30px;
 }
 
 .contenedor-malla {
@@ -22,11 +23,13 @@ h1 {
   padding: 15px;
   border-radius: 10px;
   width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .semestre h2 {
   text-align: center;
   color: #a8004f;
+  margin-bottom: 10px;
 }
 
 .ramo {
@@ -45,6 +48,6 @@ h1 {
 
 .aprobado {
   text-decoration: line-through;
-  background: #c9f7cb;
+  background: #d4edda;
   border-left-color: #28a745;
 }
