@@ -108,6 +108,15 @@ h1 {
   color: #fff;
   font-weight: bold;
   transition: all 0.5s ease;
+  animation: pop 0.25s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
 }
 
 #felicitacion {
