@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom right, #f7d6e0, #fce4f9);
   padding: 20px;
   margin: 0;
@@ -41,21 +41,64 @@ h1 {
   margin-bottom: 10px;
 }
 
+/* Ramo styles with sparkle effect */
 .ramo {
+  position: relative;
   background: white;
   margin: 6px 0;
-  padding: 10px;
+  padding: 10px 15px;
   border-left: 5px solid #d291f4;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
 
 .ramo:hover {
   background: #f6d8ff;
-  box-shadow: 0 0 8px #d9b3ff;
-  transform: scale(1.02);
+  box-shadow: 0 0 12px 2px #d9b3ff;
+  transform: scale(1.05);
+}
+
+/* Sparkles container */
+.ramo:hover::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 130%;
+  height: 130%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 20%, #fff8ff 1px, transparent 2px),
+    radial-gradient(circle at 50% 50%, #f9e2ff 2px, transparent 4px),
+    radial-gradient(circle at 80% 80%, #d2a6ff 1.5px, transparent 3px);
+  background-repeat: no-repeat;
+  animation: sparkle 1.5s linear infinite;
+  opacity: 0.7;
+  border-radius: 8px;
+}
+
+@keyframes sparkle {
+  0% {
+    background-position:
+      20% 20%,
+      50% 50%,
+      80% 80%;
+  }
+  50% {
+    background-position:
+      22% 18%,
+      52% 48%,
+      78% 82%;
+  }
+  100% {
+    background-position:
+      20% 20%,
+      50% 50%,
+      80% 80%;
+  }
 }
 
 .aprobado {
