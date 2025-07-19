@@ -2,14 +2,14 @@
 
 body {
   font-family: sans-serif;
-  background: linear-gradient(to bottom right, #ffe3ec, #ffd3b6); /* Fondo mágico */
+  background: linear-gradient(to bottom right, #ffe3ec, #ffd3b6);
   padding: 20px;
   margin: 0;
 }
 
 h1 {
   text-align: center;
-  color: #c03c5c;
+  color: #7d3c98;
   margin-bottom: 30px;
   font-family: 'Playfair Display', serif;
   font-size: 32px;
@@ -23,7 +23,7 @@ h1 {
 }
 
 .semestre {
-  background: #ffd9cc; /* rosado tipo coral */
+  background: #fce4f9; /* rosado claro */
   padding: 15px;
   border-radius: 10px;
   width: 200px;
@@ -37,7 +37,7 @@ h1 {
 
 .semestre h2 {
   text-align: center;
-  color: #a83654;
+  color: #9b59b6;
   margin-bottom: 10px;
 }
 
@@ -45,7 +45,7 @@ h1 {
   background: white;
   margin: 6px 0;
   padding: 10px;
-  border-left: 5px solid #ff7f50; /* coral */
+  border-left: 5px solid #d291f4; /* morado suave */
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -53,20 +53,21 @@ h1 {
 }
 
 .ramo:hover {
-  background: #ffe5dc;
-  box-shadow: 0 0 8px #ffb6b6;
+  background: #f6d8ff;
+  box-shadow: 0 0 8px #d9b3ff;
   transform: scale(1.02);
 }
 
 .aprobado {
   text-decoration: line-through;
-  background: #d8b4f8; /* morado claro */
-  border-left-color: #9b59b6; /* morado fuerte */
-  color: #5e2d79;
+  background: #b388eb; /* fondo morado intenso */
+  border-left-color: #6c3483; /* borde morado oscuro */
+  color: #fff;
+  font-weight: bold;
   transition: all 0.5s ease;
 }
 
-/* Felicitación abajo en fade */
+/* Mensaje de felicitación */
 #felicitacion {
   display: none;
   opacity: 0;
@@ -74,7 +75,7 @@ h1 {
   text-align: center;
   font-size: 18px;
   margin-top: 30px;
-  color: #9b59b6;
+  color: #6c3483;
   font-weight: bold;
   font-family: 'Playfair Display', serif;
 }
