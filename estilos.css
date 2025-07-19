@@ -2,10 +2,9 @@
 
 body {
   font-family: sans-serif;
-  background: linear-gradient(to bottom right, #cbb4d4, #f7d6e0);
+  background: linear-gradient(to bottom right, #f7d6e0, #fce4f9);
   padding: 20px;
   margin: 0;
-
 }
 
 h1 {
@@ -24,7 +23,7 @@ h1 {
 }
 
 .semestre {
-  background: #fce4f9; /* rosado claro */
+  background: #fce4f9;
   padding: 15px;
   border-radius: 10px;
   width: 200px;
@@ -46,7 +45,7 @@ h1 {
   background: white;
   margin: 6px 0;
   padding: 10px;
-  border-left: 5px solid #d291f4; /* morado suave */
+  border-left: 5px solid #d291f4;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -61,14 +60,13 @@ h1 {
 
 .aprobado {
   text-decoration: line-through;
-  background: #b388eb; /* fondo morado intenso */
-  border-left-color: #6c3483; /* borde morado oscuro */
+  background: #7d3c98;
+  border-left-color: #4a235a;
   color: #fff;
   font-weight: bold;
   transition: all 0.5s ease;
 }
 
-/* Mensaje de felicitación */
 #felicitacion {
   display: none;
   opacity: 0;
