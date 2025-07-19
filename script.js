@@ -7,6 +7,7 @@ function toggleAprobado(element) {
 
   if (!yaEstabaAprobado) {
     mostrarFelicitacion();
+    animacionPop(element);
   }
 
   guardarEstado();
@@ -21,6 +22,13 @@ function mostrarFelicitacion() {
   timeoutId = setTimeout(() => {
     mensajeFelicitacion.classList.remove('visible');
   }, 3000);
+}
+
+function animacionPop(element) {
+  element.style.animation = 'pop 0.25s ease';
+  element.addEventListener('animationend', () => {
+    element.style.animation = '';
+  }, { once: true });
 }
 
 function guardarEstado() {
